@@ -1,39 +1,100 @@
-# Календарь звонков
+# Booking Calendar
 
+A Cal.com-like booking service built with ASP.NET Core, Blazor WebAssembly, and PostgreSQL.
 
 [![hexlet-check](https://github.com/TuuTikkiYukka9/ai-for-developers-project-386/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/TuuTikkiYukka9/ai-for-developers-project-386/actions)
 
-Разработайте совместно с ИИ сервис для бронирования календаря
+Educational project: https://ru.hexlet.io/programs/ai-for-developers
 
-Учебный проект Хекслета: https://ru.hexlet.io/programs/ai-for-developers
-Как это должно работать: https://files.hexlet.app/a/2ipc5m
+## Stack
 
-## Стек
+- **Backend**: ASP.NET Core Web API (.NET 10)
+- **Frontend**: Blazor WebAssembly (.NET 10)
+- **Database**: PostgreSQL with Entity Framework Core
+- **Architecture**: Clean architecture with Shared, Orm, Api, Client projects
+- **Testing**: xUnit, bUnit, Microsoft.AspNetCore.Mvc.Testing
 
-- Разное
+## Project Structure
 
-## Установка
+```
+BookingCalendar.sln
+├── Api/              # ASP.NET Core Web API
+├── Client/           # Blazor WebAssembly
+├── Orm/              # EF Core data models & DbContext
+├── Shared/           # Shared DTOs, interfaces, constants
+├── Api.Tests/        # API integration tests
+└── Client.Tests/     # Blazor component tests (bUnit)
+```
 
-<!-- Опишите установку: клонирование, зависимости, переменные окружения -->
+## Getting Started
+
+### Prerequisites
+
+- [.NET 10 SDK](https://dotnet.microsoft.com/download)
+- PostgreSQL (for full functionality)
+
+### Installation
 
 ```bash
 git clone https://github.com/TuuTikkiYukka9/ai-for-developers-project-386.git
 cd ai-for-developers-project-386
+dotnet restore
 ```
 
-## Использование
+### Running the Projects
 
-<!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
+**Terminal 1 - API (runs on http://localhost:5000):**
+```bash
+dotnet run --project Api/BookingCalendar.Api.csproj
+```
+
+**Terminal 2 - Client (runs on http://localhost:5001):**
+```bash
+dotnet run --project Client/BookingCalendar.Client.csproj
+```
+
+### Running Tests
+
+```bash
+# Run all tests
+dotnet test
+
+# Run specific test project
+dotnet test Api.Tests/BookingCalendar.Api.Tests.csproj
+dotnet test Client.Tests/BookingCalendar.Client.Tests.csproj
+```
+
+## Development
+
+### Database Migrations
+
+```bash
+# Add migration
+dotnet ef migrations add <Name> --project Orm/BookingCalendar.Orm.csproj --startup-project Api/BookingCalendar.Api.csproj
+
+# Update database
+dotnet ef database update --project Orm/BookingCalendar.Orm.csproj --startup-project Api/BookingCalendar.Api.csproj
+```
+
+### Solution Management
+
+```bash
+# Add project to solution
+dotnet sln add <ProjectPath>
+
+# List projects in solution
+dotnet sln list
+```
 
 ---
 
 <details>
-<summary>Автоматические тесты Хекслета</summary>
+<summary>Hexlet Auto-tests</summary>
 
-Тесты запускаются на каждый коммит. За запуск отвечает файл `.github/workflows/hexlet-check.yml` — не удаляйте и не переименовывайте ни его, ни репозиторий.
+Tests run on every commit. The `.github/workflows/hexlet-check.yml` file handles this — do not delete or rename it.
 
 </details>
 
-## О Хекслете
+## About Hexlet
 
-[Хекслет](https://ru.hexlet.io/) — школа программирования: авторские программы обучения с практикой, поддержкой наставников и реальными проектами, которые остаются в резюме. Этот репозиторий — один из таких проектов.
+[Hexlet](https://ru.hexlet.io/) — programming school with hands-on programs, mentor support, and real projects for your portfolio.

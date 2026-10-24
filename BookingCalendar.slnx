@@ -1,0 +1,20 @@
+<Solution>
+  <Folder Name="/Api.Tests/">
+    <Project Path="Api.Tests/BookingCalendar.Api.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Api/">
+    <Project Path="Api/BookingCalendar.Api.csproj" />
+  </Folder>
+  <Folder Name="/Client.Tests/">
+    <Project Path="Client.Tests/BookingCalendar.Client.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Client/">
+    <Project Path="Client/BookingCalendar.Client.csproj" />
+  </Folder>
+  <Folder Name="/Orm/">
+    <Project Path="Orm/BookingCalendar.Orm.csproj" />
+  </Folder>
+  <Folder Name="/Shared/">
+    <Project Path="Shared/BookingCalendar.Shared.csproj" />
+  </Folder>
+</Solution>
