@@ -1,0 +1,17 @@
+<Project>
+  <PropertyGroup>
+    <Version>1.0.0</Version>
+    <Authors>BookingCalendar Team</Authors>
+    <Company>BookingCalendar</Company>
+    <Product>BookingCalendar</Product>
+    <Description>A Cal.com-like booking service built with ASP.NET Core, Blazor WebAssembly, and PostgreSQL</Description>
+    <Copyright>Copyright © 2024</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/TuuTikkiYukka9/ai-for-developers-project-386</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TuuTikkiYukka9/ai-for-developers-project-386</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+</Project>
